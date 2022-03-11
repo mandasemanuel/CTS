@@ -9,8 +9,7 @@ import com.company.sql.*;
 import com.company.sql.contracts.SqlConnection;
 import com.company.sql.contracts.SqlQuery;
 import com.company.sql.queries.SqlCreate;
-import com.company.sql.queries.SqlInsert;
-import com.company.sql.queries.SqlSelect;
+
 
 public class Main {
     public static String databaseType = "SQL";
@@ -21,7 +20,7 @@ public class Main {
 
         if("SQL".equals(databaseType)) {
             SqlConnection connection = new Sql();
-            SqlQuery query = new SqlSelect();
+            SqlQuery query = new SqlCreate();
             orchestrator = new SqlOrchestrator(connection, query);
 
         } else {
